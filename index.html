@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda Web Multicapas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="main-container">
+        <!-- Formulario para agregar contactos -->
+        <div class="card">
+            <h2>Nuevo Contacto</h2>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellido">Apellido:</label>
+                    <input type="text" id="apellido" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" required>
+                </div>
+                <button type="submit" class="btn-submit">Guardar en la Agenda</button>
+            </form>
+        </div>
+
+        <!-- Listado de contactos -->
+        <div class="card list-card">
+            <h2>Listado de Contactos</h2>
+            <button onclick="cargarContactos()" class="btn-refresh">Actualizar Listado</button>
+            <div class="table-container">
+                <table class="contact-table">
+                    <thead>
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Apellido</th>
+                            <th>Teléfono</th>
+                        </tr>
+                    </thead>
+                    <tbody id="contact-list">
+                        <!-- Se llenarán dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
